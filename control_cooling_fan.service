@@ -1,0 +1,10 @@
+[Unit]
+Description=Turn on/off the cooling fan of Raspberry Pi4
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/bin/control_cooling_fan.py
+
+[Install]
+WantedBy=multi-user.target
